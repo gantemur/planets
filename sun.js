@@ -1,8 +1,7 @@
     function draw() {
         var ddays = jdn2ndn(t);
         var prectab = ddays / cent;
-        //var apogeesu = apogeesu0;
-        var apogeesu = degmod(apogeesu0 + prectab);
+        var apogeesu = degmod(apogeesu0 + ddays * napogeesu / cent);
         var mlongsu = degmod(mlongsu0 + ddays * nsulong);
         var manomsu = degmod(mlongsu - apogeesu);
         var eqsu = atand(eccsu * sind(manomsu) / (1 + eccsu * cosd(manomsu)));
